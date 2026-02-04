@@ -4,7 +4,11 @@ export const counterContext = createContext()
 
 const MainContext = ({children}) => {
     const [count, setCount] = useState(0)
-    let globalOBJ = {count, setCount}
+    const [color, setColor] = useState(false)
+
+
+
+    let globalOBJ = {count, setCount, color, setColor}
 
   return (
     <counterContext.Provider value={globalOBJ}>
